@@ -12,11 +12,11 @@ export PATH
 # Current folder
 cur_dir=`pwd`
 
-libsodium_file="libsodium-1.0.17"
-libsodium_url="https://github.com/jedisct1/libsodium/releases/download/1.0.17/libsodium-1.0.17.tar.gz"
+libsodium_file="libsodium-1.0.18"
+libsodium_url="https://download.libsodium.org/libsodium/releases/libsodium-1.0.18.tar.gz"
 
-mbedtls_file="mbedtls-2.16.0"
-mbedtls_url="https://tls.mbed.org/download/mbedtls-2.16.0-gpl.tgz"
+mbedtls_file="mbedtls-2.16.1"
+mbedtls_url="https://tls.mbed.org/download/mbedtls-2.16.1-gpl.tgz"
 
 # Stream Ciphers
 ciphers=(
@@ -87,7 +87,7 @@ get_latest_version(){
     [ -z ${ver} ] && echo "Error: Get shadowsocks-libev latest version failed" && exit 1
     shadowsocks_libev_ver="shadowsocks-libev-$(echo ${ver} | sed -e 's/^[a-zA-Z]//g')"
     download_link="https://github.com/shadowsocks/shadowsocks-libev/releases/download/${ver}/${shadowsocks_libev_ver}.tar.gz"
-    init_script_link="https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocks-libev"
+    init_script_link="https://raw.githubusercontent.com/xlsdg/shadowsocks_install/master/shadowsocks-libev"
 }
 
 check_installed(){
